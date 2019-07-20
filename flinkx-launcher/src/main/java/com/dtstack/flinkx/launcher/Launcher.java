@@ -79,6 +79,9 @@ public class Launcher {
 
 
     public static void main(String[] args) throws Exception {
+
+        System.setProperty("HADDP_USER_NMAE", "hbase");
+
         LauncherOptions launcherOptions = new LauncherOptionParser(args).getLauncherOptions();
         String mode = launcherOptions.getMode();
         List<String> argList = initFlinkxArgList(launcherOptions);
